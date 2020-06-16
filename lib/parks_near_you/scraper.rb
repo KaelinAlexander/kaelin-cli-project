@@ -1,9 +1,3 @@
-require 'pry'
-require 'net/http'
-require 'nokogiri'
-require 'open-uri'
-require 'json'
-
 class GetParks
 attr_accessor :zipcode
 
@@ -27,5 +21,3 @@ attr_accessor :zipcode
 
 end
 #
-parks = GetParks.new
-parsed = parks.parks_by_zip
