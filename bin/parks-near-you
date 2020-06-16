@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require_relative "../config/environment"
+
+parks = GetParks.new
+parsed = parks.parks_by_zip

@@ -1,6 +1,7 @@
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
+require 'json'
 
 require_relative '../lib/parks_near_you/cli'
 require_relative '../lib/parks_near_you/parks'
