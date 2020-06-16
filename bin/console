@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "kaelin/cli/project"
+require "lib/parks_near_you/parks"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -11,4 +11,6 @@ require "kaelin/cli/project"
 # Pry.start
 
 require "irb"
+require "pry"
+Pry.start
 IRB.start(__FILE__)
