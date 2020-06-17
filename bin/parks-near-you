@@ -3,4 +3,5 @@
 require_relative "../config/environment"
 
 parks = GetParks.new
-parsed = parks.parks_by_zip
+parsed = parks.parks_by_state
+# attributed = parsed.park_att
