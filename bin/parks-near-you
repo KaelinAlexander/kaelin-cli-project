@@ -2,6 +2,5 @@
 
 require_relative "../config/environment"
 
-parks = GetParks.new
-parsed = parks.parks_by_state
+User.new.call
 # attributed = parsed.park_att

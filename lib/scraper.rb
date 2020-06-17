@@ -1,9 +1,9 @@
 class GetParks
 attr_accessor :parkset, :location
 
-  def initialize
-    @location = User.location
-    binding.pry
+  def initialize(location)
+    @location = location
+    self.parks_by_state
   end
 
   def get_parks
@@ -18,16 +18,17 @@ attr_accessor :parkset, :location
     if parkset.empty?
       puts "That request returns no matching parks. Please try another state or zip code."
     end
+    Park.new_from_array(parkset)
   end
 
   # def park_att
+  #   attributes = []
+  #     self.parks_by_state
   #     @parkset.each do |park|
-  #         park.each do
+  #         park.each do |k, v|
   #           park.send("#{k}=", v)
   #         end
   #       end
-  #     park
-  #     binding.pry
+  #       binding.pry
   #   end
-
 end
