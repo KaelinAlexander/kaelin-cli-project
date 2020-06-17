@@ -26,6 +26,10 @@ attr_accessor :location
   def list_parks(location)
     puts "Great! Let's find out about all the National Parks in #{@location}. Give me just a minute..."
     GetParks.new(location)
+    Park.all.each{|park| puts "#{park.list_number}. #{park.name}"}
+    # List the parks by name and index + 1.
+
+    #Allow the user to select a number for more details.
   end
 
   def options
