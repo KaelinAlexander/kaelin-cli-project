@@ -16,7 +16,7 @@ attr_accessor :parkset, :location
     parks = JSON.parse(self.get_parks)
     @parkset = parks["data"]
     if parkset.empty?
-      puts "That request returns no matching parks. Please try another state or zip code."
+      puts "That request returns no matching parks."
     end
     Park.new_from_array(parkset)
   end

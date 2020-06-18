@@ -1,5 +1,5 @@
 class Park
-attr_accessor :list_number, :name, :raw_address, :address, :fees, :description, :website
+attr_accessor :list_number, :name, :raw_address, :fees, :description, :website, :address
 @@all = []
 
   def initialize(park)
@@ -19,19 +19,23 @@ attr_accessor :list_number, :name, :raw_address, :address, :fees, :description, 
   end
 
   def generate_attributes(park)
-      counter = 1
       park.each do |k,v|
         @raw_address = []
         @name = park["name"]
-        @fees = park["entranceFees"][0]["description"]
+        # @fees = park["entranceFees"][0]["description"]
         park["addresses"].each do |address|
             if address["type"] == "Physical"
-              @raw_address << address
+              @raw_address << address.to_h
+            cleanup(@raw_address)
             end
         end
         @description = park["description"]
         @website = park["url"]
       end
+  end
+
+  def cleanup(raw)
+      self.address = "#{raw[0]["line1"]}\n#{raw[0]["city"]}, #{raw[0]["stateCode"]} #{raw[0]["postalCode"]}"
   end
 
   def save
@@ -43,4 +47,7 @@ attr_accessor :list_number, :name, :raw_address, :address, :fees, :description, 
     @list_number = index + 1
   end
 
+  def self.find_by_number(selection)
+    all.find{|park| park.list_number == selection}
+  end
 end
