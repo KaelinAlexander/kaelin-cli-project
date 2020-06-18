@@ -11,7 +11,7 @@ attr_accessor :location, :selection, :parks_in_state
     sleep(2)
     puts "With this app, you can find out about National Parks, Monuments, Historic Sites, and other NPS \nareas of interest in your state, or wherever your travels might take you."
     puts "\n"
-    sleep(5)
+    sleep(3)
     menu
   end
 
@@ -25,7 +25,7 @@ attr_accessor :location, :selection, :parks_in_state
             puts "\n"
             puts "It may surprise you to learn that there aren't any NPS sites in that state or territory. \nWeird, right?"
             puts "\n"
-            sleep(3)
+            sleep(2)
             menu
           else
             get_parks(location)
@@ -33,7 +33,7 @@ attr_accessor :location, :selection, :parks_in_state
         else
           puts "Sorry, I didn't understand that."
           puts "\n"
-          sleep(1)
+          sleep(2)
           menu
         end
       end
@@ -81,7 +81,7 @@ attr_accessor :location, :selection, :parks_in_state
             puts "\n"
             puts "#{selected.description}"
             puts "\n"
-            puts "For more information, visit #{selected.website}"
+            puts "For more information, visit #{selected.website}."
             sleep(5)
             options
   end
@@ -114,6 +114,7 @@ attr_accessor :location, :selection, :parks_in_state
     puts "\n"
     puts "Awesome! Stay safe, and have fun out there."
     puts "\n"
+    exit
   end
 
 end
