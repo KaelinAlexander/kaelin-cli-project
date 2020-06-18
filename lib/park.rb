@@ -1,5 +1,5 @@
 class Park
-attr_accessor :list_number, :name, :raw_address, :fees, :description, :website, :address
+attr_accessor :list_number, :name, :designation, :raw_address, :fees, :description, :website, :address
 @@all = []
 
   def initialize(park)
@@ -22,6 +22,7 @@ attr_accessor :list_number, :name, :raw_address, :fees, :description, :website, 
       park.each do |k,v|
         @raw_address = []
         @name = park["name"]
+        @designation = park["designation"]
         # @fees = park["entranceFees"][0]["description"]
         park["addresses"].each do |address|
             if address["type"] == "Physical"
