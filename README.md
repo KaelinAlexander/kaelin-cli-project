@@ -1,34 +1,29 @@
 # Kaelin::Cli::Project
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/kaelin/cli/project`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the "Parks Near You" CLI Project. With this app, you can search for National Park Service sites -- including National Parks, Historic Sites, Monuments, and other destinations -- by accessing the National Park Service (NPS) API. After searching by state, you'll have the option to see more details about any NPS sites, and can run searches for other states afterwards.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+To begin the app:
 
-```ruby
-gem 'kaelin-cli-project'
-```
+  1. Clone the repo.
+  2. Type 'cd kaelin-cli-project'
+  3. Type 'bundle install'
+  4. Upon completion of the installation, start the CLI by running:
 
-And then execute:
+    $ ruby bin/parks-near-you
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install kaelin-cli-project
+  5. Then, follow the prompts.
 
 ## Usage
 
-TODO: Write usage instructions here
+  1. Follow the prompts from the CLI.
+  2. Please note that states and territories must be entered using their two-letter postal abbreviations.
+  3. Simply use 'y' or 'n' to answer 'yes' or 'no' questions.
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+For questions about development, please contact me at kaelin.alexander@gmail.com.
 
 ## Contributing
 
