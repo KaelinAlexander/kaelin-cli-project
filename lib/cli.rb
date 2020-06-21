@@ -5,7 +5,7 @@ attr_accessor :location, :state_name, :selection, :parks_in_state
 
   def call
     puts "\n"
-    puts "***Welcome the National Park System Directory!***"
+    puts "***Welcome to the National Park System Directory!***"
     puts "\n"
     sleep(2)
     puts "With this app, you can find out about National Parks, Monuments, Historic Sites, and other \nNational Park Service (NPS) areas of interest in your state, or wherever your travels might take you."
